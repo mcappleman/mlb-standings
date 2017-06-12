@@ -1,7 +1,7 @@
 'use strict';
 
 const ROOT_DIR = process.env.ROOT_DIR = __dirname;
-const SERVER_PORT = process.env.PORT || 8989;
+const SERVER_PORT = process.env.PORT || 8001;
 
 // Pull in environmental variables
 require('dotenv').config({ path: `${ROOT_DIR}/.env` });
