@@ -82,6 +82,11 @@ app.use((err, req, res, next) => {
 
 });
 
+app.use((req, res, next) => {
+	logger.info(new Date(), req.method, req.url);
+	next();
+});
+
 app.use((err, req, res, next) => {
 
 	res.send({
