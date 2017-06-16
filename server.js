@@ -83,7 +83,9 @@ app.use((err, req, res, next) => {
 });
 
 app.use((req, res, next) => {
-	logger.info(new Date(), req.method, req.url);
+	
+	var message = `${new Date()} --- ${req.method} --- ${req.url}`;
+	logger.info(message);
 	next();
 });
 
